@@ -213,6 +213,18 @@ class URLSpawnHandler : EventHandler {
         addAmmo('HDRel_RawSteel', mat_steel);
 
         //---------------------
+        // Spawning
+        //---------------------
+
+        // Universal Reloader
+		Array<URLSpawnItemEntry> spawns_url;
+		spawns_url.push(addItemEntry('HDAmBox', url_ammobox_spawn_bias));
+		spawns_url.push(addItemEntry('HDAmBoxUnarmed', url_ammobox_spawn_bias));
+		spawns_url.push(addItemEntry('DeadRifleman', url_dead_rifleman_spawn_bias));
+		spawns_url.push(addItemEntry('ReallyDeadRifleman', url_dead_rifleman_spawn_bias));
+		addItem('HDUniversalReloader', spawns_url, url_persistent_spawning, false);
+
+        //---------------------
         // Crafting Recipes
         //---------------------
 

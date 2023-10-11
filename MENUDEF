@@ -23,12 +23,12 @@ OptionValue "RecipeEnabled" {
 	3, "$URL_ENABLED"
 }
 
-OptionMenu URLSpawning {
+OptionMenu URLSpawns {
     Title "------ Universal Reloader Spawning Options ------"
     StaticText ""
 	
-	StaticText "Enable/Disable the Universal Reloader from spawning in Backpacks."
-	Option "Universal Reloader:", "url_allowBackpacks", "OnOff"
+    StaticText "--- Items ---"
+	Submenu "Universal Reloader", "urlSpawning", 0, 1
  	StaticText ""
 	
 	StaticText "Enable/Disable the Gunsmith Pouch from spawning in Backpacks."
@@ -127,6 +127,27 @@ OptionMenu URLRecipes {
     Submenu "$TAG_12SLUG", "URL12gaSlugsAmmo", 0, 1
     StaticText ""
     Submenu "$PEPPER_TAG_NDM", "URLNDMAmmo", 0, 1
+}
+
+OptionMenu "urlSpawning" {
+    Title "------ Universal Reloader Options ------"
+
+	StaticText "$MENU_ITEMSPAWNOPTIONS", "Blue"
+    StaticText "Control the spawn rate of the Universal Reloader on dead riflemen:", "White"
+	Option "$MENU_ITEMSPAWNRATE", "url_dead_rifleman_spawn_bias", "DropBias"
+    StaticText "Control the spawn rate of the Universal Reloader on ammo boxes:", "White"
+	Option "$MENU_ITEMSPAWNRATE", "url_ammobox_spawn_bias", "DropBias"
+	SafeCommand "$MENU_RESETITEM", "resetcvar url_ammobox_spawn_bias; resetcvar url_dead_rifleman_spawn_bias"
+ 	StaticText ""
+
+	StaticText "Control whether the Universal Reloader spawns in Backpacks: ", "White"
+	Option "$MENU_BACKPACKSALLOWED", "url_allowBackpacks", "OnOff"
+ 	StaticText ""
+
+	StaticText "$MENU_PERSISTENCYOPTIONS", "Blue"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+	Option "$MENU_ITEMPERSISTENCY", "url_persistent_spawning", "OnOff"
+	SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar url_persistent_spawning"
 }
 
 OptionMenu URLPistolAmmo {
@@ -932,7 +953,7 @@ OptionMenu URLMenu {
     Submenu "$URL_RECIPE_MENU", "URLRecipes"
     StaticText "" 
 
-    Submenu "$URL_SPAWNING_MENU", "URLSpawning"
+    Submenu "$URL_SPAWNING_MENU", "URLSpawns"
     StaticText "" 
    
     StaticText ""
@@ -949,4 +970,21 @@ AddOptionMenu "OptionsMenu"
 AddOptionMenu "HDAddonMenu"
 {
     Submenu "$URL_MENU", "URLMenu"
+}
+
+
+OptionValue "DropBias"
+{
+	-1,    "Disabled"
+	 0,    "With All"
+	 2,    "1 in 3"
+	 4,    "1 in 5"
+	 9,    "1 in 10"
+	 14,   "1 in 15"
+	 19,   "1 in 20"
+	 24,   "1 in 25"
+	 49,   "1 in 50"
+	 99,   "1 in 100"
+	 149,  "1 in 150"
+	 199,  "1 in 200"
 }

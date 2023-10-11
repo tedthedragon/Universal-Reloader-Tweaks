@@ -23,6 +23,29 @@ URL_RESET_ALL             = "Reset all options";
 
 URL_NO_MATERIAL           = "No Material";
 
+// Menu Section Headers
+MENU_SPAWNOPTIONS         = "Spawn Options";
+MENU_ITEMSPAWNOPTIONS     = "Item Spawn Options";
+MENU_PERSISTENCYOPTIONS   = "Spawn Persistence Options";
+MENU_RESETOPTIONS         = "Reset Options";
+MENU_RESETALLOPTIONS      = "Reset all Options";
+
+// Menu Static Text
+MENU_SPAWNRATE_TEXT1      = "Setting 'spawn rate' to Replace All will suppress";
+MENU_SPAWNRATE_TEXT2      = "spawns of that given type.";
+MENU_PERSISTENCY_TEXT     = "Control whether replacements happen after a mapload:";
+
+// Menu Option Labels
+MENU_NOTICE               = "Notice:";
+MENU_SPAWNRATE            = "Spawn Rate: ";
+MENU_ITEMSPAWNRATE        = "Item Spawn Rate: ";
+MENU_PERSISTENCY          = "Persistent Spawns: ";
+MENU_ITEMPERSISTENCY      = "Persistent Item Spawns: ";
+
+// Menu Command Text
+MENU_RESETITEM            = "Reset Item Options";
+MENU_RESETPERSISTENCY     = "Reset Persistence Options";
+
 // Item Tags
 TAG_RAWBRASS              = "Brass";
 TAG_RAWLEAD               = "Lead";
