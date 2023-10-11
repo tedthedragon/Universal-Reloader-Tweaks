@@ -2,6 +2,8 @@
 
 // Options Menu Labels
 URL_MENU                  = "Universal Reloader Options";
+URL_RECIPE_MENU           = "Recipe Menu";
+URL_SPAWNING_MENU         = "Spawning Menu";
 
 URL_ENABLED               = "Enabled";
 URL_ASSEMBLY_ONLY         = "Assembly Only";
