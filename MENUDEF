@@ -150,6 +150,27 @@ OptionMenu "urlSpawning" {
 	SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar url_persistent_spawning"
 }
 
+OptionMenu "gspSpawning" {
+    Title "------ Gunsmithing Pouch Options ------"
+
+	StaticText "$MENU_ITEMSPAWNOPTIONS", "Blue"
+    StaticText "Control the spawn rate of the Universal Reloader on dead riflemen:", "White"
+	Option "$MENU_ITEMSPAWNRATE", "url_dead_rifleman_spawn_bias", "DropBias"
+    StaticText "Control the spawn rate of the Universal Reloader on ammo boxes:", "White"
+	Option "$MENU_ITEMSPAWNRATE", "url_ammobox_spawn_bias", "DropBias"
+	SafeCommand "$MENU_RESETITEM", "resetcvar url_ammobox_spawn_bias; resetcvar url_dead_rifleman_spawn_bias"
+ 	StaticText ""
+
+	StaticText "Control whether the Universal Reloader spawns in Backpacks: ", "White"
+	Option "$MENU_BACKPACKSALLOWED", "url_allowBackpacks", "OnOff"
+ 	StaticText ""
+
+	StaticText "$MENU_PERSISTENCYOPTIONS", "Blue"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+	Option "$MENU_ITEMPERSISTENCY", "url_persistent_spawning", "OnOff"
+	SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar url_persistent_spawning"
+}
+
 OptionMenu URLPistolAmmo {
     Title "------ 9mm Ammo Recipe Options ------"
     StaticText ""

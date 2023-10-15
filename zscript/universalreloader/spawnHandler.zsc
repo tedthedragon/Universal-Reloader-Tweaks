@@ -220,6 +220,8 @@ class URLSpawnHandler : EventHandler {
 		Array<URLSpawnItemEntry> spawns_url;
 		spawns_url.push(addItemEntry('HDAmBox', url_ammobox_spawn_bias));
 		spawns_url.push(addItemEntry('HDAmBoxUnarmed', url_ammobox_spawn_bias));
+		spawns_url.push(addItemEntry('WIMPHDBackpack', url_ammobox_spawn_bias));
+		spawns_url.push(addItemEntry('HDBackpack', url_ammobox_spawn_bias));
 		spawns_url.push(addItemEntry('DeadRifleman', url_dead_rifleman_spawn_bias));
 		spawns_url.push(addItemEntry('ReallyDeadRifleman', url_dead_rifleman_spawn_bias));
 		addItem('HDUniversalReloader', spawns_url, url_persistent_spawning, false);

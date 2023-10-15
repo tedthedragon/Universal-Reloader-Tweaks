@@ -14,7 +14,9 @@ server bool rawSteel_allowBackpacks        = true;
 // SPAWNING
 server int url_ammobox_spawn_bias          = -1;
 server int url_dead_rifleman_spawn_bias    = -1;
-server bool url_persistent_spawning        = false;
+server bool url_persistent_spawning        = true;
+
+// Everything below this is recipe related.
 
 // VANILLA HDEST
 server int   url_9mm_enabled               = 3;
